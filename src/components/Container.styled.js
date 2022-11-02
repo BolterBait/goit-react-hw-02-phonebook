@@ -7,3 +7,4 @@ export const Container = styled.div`
   align-items: flex-start;
   padding: 20px 0;
   margin-left: 40px;`
+

@@ -1,5 +1,6 @@
 import { React, Component } from 'react';
 import { nanoid } from 'nanoid';
+import { FieldName, Field, Wrap, AddButton } from './ContactForm.styled';
 
 class Form extends Component {
   state = {
@@ -16,7 +17,7 @@ class Form extends Component {
     e.preventDefault();
     console.log(this.state);
     this.props.onSubmit(this.state);
-    this.nameId = nanoid();
+    this.id = nanoid();
     this.reset();
   };
 
@@ -29,23 +30,23 @@ class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor={this.nameId}>
+      <Wrap onSubmit={this.handleSubmit}>
+        <FieldName htmlFor={this.id}>
           Name
-          <input
+          <Field
             type="text"
             name="name"
             value={this.state.name}
             onChange={this.handleChange}
-            id={this.nameId}
+            id={this.id}
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
           />
-        </label>
-        <label htmlFor={this.phoneNumber}>
+        </FieldName>
+        <FieldName htmlFor={this.phoneNumber}>
           Phone number
-          <input
+          <Field
             type="tel"
             name="number"
             value={this.state.number}
@@ -54,9 +55,9 @@ class Form extends Component {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
-        </label>
-        <button type="submit">Add contact</button>
-      </form>
+        </FieldName>
+        <AddButton type="submit">Add contact</AddButton>
+      </Wrap>
     );
   }
 }
