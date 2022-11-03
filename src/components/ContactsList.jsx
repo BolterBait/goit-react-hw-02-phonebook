@@ -17,6 +17,6 @@ export const ContactsList = ({ contacts, deleteContact }) => {
 };
 
 ContactsList.propTypes = {
-  contact: PropTypes.object.isRequired,
+  contact: PropTypes.object,
   deleteContact: PropTypes.func.isRequired,
 };
