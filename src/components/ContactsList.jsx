@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ContactItem } from './ContactItem';
 
 export const ContactsList = ({ contacts, deleteContact }) => {
@@ -13,4 +14,9 @@ export const ContactsList = ({ contacts, deleteContact }) => {
       ))}
     </ul>
   );
+};
+
+ContactsList.propTypes = {
+  contact: PropTypes.object.isRequired,
+  deleteContact: PropTypes.func.isRequired,
 };

@@ -1,8 +1,9 @@
 import { React, Component } from 'react';
+import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import { FieldName, Field, Wrap, AddButton } from './ContactForm.styled';
 
-class Form extends Component {
+class ContactForm extends Component {
   state = {
     name: '',
     number: '',
@@ -15,7 +16,6 @@ class Form extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
     this.props.onSubmit(this.state);
     this.id = nanoid();
     this.reset();
@@ -62,4 +62,9 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default ContactForm;
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+};

@@ -1,5 +1,5 @@
 import { React, Component } from 'react';
-import Form from './ContactForm';
+import ContactForm from './ContactForm';
 import { ContactsList } from './ContactsList';
 import { Filter } from './Filter';
 import { nanoid } from 'nanoid';
@@ -55,7 +55,7 @@ export class App extends Component {
     return (
       <Container>
         <h1>Phonebook</h1>
-        <Form onSubmit={this.formCreateContacts}></Form>
+        <ContactForm onSubmit={this.formCreateContacts}></ContactForm>
         <h2>Contacts</h2>
         <Filter onFilter={this.onFilter} filter={filter}></Filter>
         <ContactsList

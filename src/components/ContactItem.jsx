@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Item, ItemField, DeleteButton } from './ContactItem.styled';
 
 export const ContactItem = ({ contact, deleteContact }) => {
@@ -16,4 +17,9 @@ export const ContactItem = ({ contact, deleteContact }) => {
       </DeleteButton>
     </Item>
   );
+};
+
+ContactItem.propTypes = {
+  contact: PropTypes.object.isRequired,
+  deleteContact: PropTypes.func.isRequired,
 };

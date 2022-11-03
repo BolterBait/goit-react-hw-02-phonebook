@@ -5,8 +5,12 @@ display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 20px 0;
-  margin-left: 40px;`
+  padding: 20px;
+  margin-left: 40px;
+  border: 2px solid grey;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  `
 
 export const Field = styled.input`
 padding: 5px;
