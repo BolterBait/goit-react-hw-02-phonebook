@@ -1,5 +1,6 @@
-import { Field, FieldName } from './Filter.styled';
 import PropTypes from 'prop-types';
+
+import { Field, FieldName } from './Filter.styled';
 
 export const Filter = ({ filter, onFilter }) => {
   return (

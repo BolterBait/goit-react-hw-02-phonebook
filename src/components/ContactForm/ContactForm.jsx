@@ -1,6 +1,7 @@
 import { React, Component } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
+
 import { FieldName, Field, Wrap, AddButton } from './ContactForm.styled';
 
 class ContactForm extends Component {

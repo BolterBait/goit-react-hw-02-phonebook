@@ -1,10 +1,12 @@
 import { React, Component } from 'react';
-import ContactForm from './ContactForm';
-import { ContactsList } from './ContactsList';
-import { Filter } from './Filter';
 import { nanoid } from 'nanoid';
 
-import { Container } from './Container.styled';
+import ContactForm from '../ContactForm/ContactForm';
+import { ContactsList } from '../ContactList/ContactsList';
+import { Filter } from '../Filter/Filter';
+
+import { Container } from './App.styled';
+
 export class App extends Component {
   state = {
     contacts: [
