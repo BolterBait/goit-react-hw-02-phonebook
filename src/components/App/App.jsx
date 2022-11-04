@@ -4,6 +4,7 @@ import { nanoid } from 'nanoid';
 import ContactForm from '../ContactForm/ContactForm';
 import { ContactsList } from '../ContactList/ContactsList';
 import { Filter } from '../Filter/Filter';
+import { contacts } from 'components/Const/Contacts';
 
 import { Container } from './App.styled';
 
@@ -62,7 +63,6 @@ export class App extends Component {
         <Filter onFilter={this.onFilter} filter={filter}></Filter>
         <ContactsList
           deleteContact={this.deleteContact}
-          // filter={filter}
           contacts={filteredList}
         ></ContactsList>
       </Container>
